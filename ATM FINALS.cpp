@@ -10,7 +10,6 @@ public:
     int pin;
     double balance;
 
-    // CHECK BALANCE
     void checkbal() {
 
         cout << "\n===== YOUR BALANCE =====" << endl;
@@ -18,7 +17,6 @@ public:
         cout << "Current Balance: " << balance << endl;
     }
 
-    // DEPOSIT MONEY
     void depositMoney() {
 
         double amount;
@@ -32,7 +30,6 @@ public:
         cout << "Updated Balance: " << balance << endl;
     }
 
-    // WITHDRAW MONEY
     void withdraw() {
 
         double amount;
@@ -49,11 +46,10 @@ public:
             balance -= amount;
 
             cout << "Withdrawal successful!" << endl;
-            cout << "Remaining Balance: " << balance << endl;
+            cout << "The Remaining Balance: " << balance << endl;
         }
     }
 
-    // CHANGE PIN
     void changePin() {
 
         int oldpin, newpin;
@@ -76,7 +72,6 @@ public:
         }
     }
 
-    // ATM MENU
     void menu() {
 
         int choice;
@@ -121,60 +116,60 @@ public:
         } while(choice != 5);
     }
 };
-    int main() {
 
-    Account myacc[10];
+int main() {
 
-    myacc[0].id = 1;
-    myacc[0].accName = "Ashley";
-    myacc[0].pin = 1234;
-    myacc[0].balance = 5000;
+    Account acc_num[10];
 
-    myacc[1].id = 2;
-    myacc[1].accName = "Analyn";
-    myacc[1].pin = 1894;
-    myacc[1].balance = 3000;
+    acc_num[0].id = 1;
+    acc_num[0].accName = "Ashley";
+    acc_num[0].pin = 12334;
+    acc_num[0].balance = 5000;
 
-    myacc[2].id = 3;
-    myacc[2].accName = "Analiza";
-    myacc[2].pin = 2639;
-    myacc[2].balance = 7000;
+    acc_num[1].id = 2;
+    acc_num[1].accName = "Analyn";
+    acc_num[1].pin = 18974;
+    acc_num[1].balance = 3000;
 
-    myacc[3].id = 4;
-    myacc[3].accName = "Teresita";
-    myacc[3].pin = 3673;
-    myacc[3].balance = 10000;
+    acc_num[2].id = 3;
+    acc_num[2].accName = "Analiza";
+    acc_num[2].pin = 26839;
+    acc_num[2].balance = 7000;
 
-    myacc[4].id = 5;
-    myacc[4].accName = "Jose";
-    myacc[4].pin = 4701;
-    myacc[4].balance = 6000;
+    acc_num[3].id = 4;
+    acc_num[3].accName = "Teresita";
+    acc_num[3].pin = 36573;
+    acc_num[3].balance = 10000;
 
-    myacc[5].id = 6;
-    myacc[5].accName = "Francis";
-    myacc[5].pin = 5730;
-    myacc[5].balance = 8000;
+    acc_num[4].id = 5;
+    acc_num[4].accName = "Jose";
+    acc_num[4].pin = 47031;
+    acc_num[4].balance = 6000;
 
-    myacc[6].id = 7;
-    myacc[6].accName = "Gleza";
-    myacc[6].pin = 84006;
-    myacc[6].balance = 4500;
+    acc_num[5].id = 6;
+    acc_num[5].accName = "Francis";
+    acc_num[5].pin = 57360;
+    acc_num[5].balance = 8000;
 
-    myacc[7].id = 8;
-    myacc[7].accName = "Glaiza";
-    myacc[7].pin = 8907;
-    myacc[7].balance = 12000;
+    acc_num[6].id = 7;
+    acc_num[6].accName = "Gleza";
+    acc_num[6].pin = 84006;
+    acc_num[6].balance = 4500;
 
-    myacc[8].id = 9;
-    myacc[8].accName = "Arlyn";
-    myacc[8].pin = 7492;
-    myacc[8].balance = 9000;
+    acc_num[7].id = 8;
+    acc_num[7].accName = "Glaiza";
+    acc_num[7].pin = 89807;
+    acc_num[7].balance = 12000;
 
-    myacc[9].id = 10;
-    myacc[9].accName = "Alliyah Jade";
-    myacc[9].pin = 1047;
-    myacc[9].balance = 15000;
+    acc_num[8].id = 9;
+    acc_num[8].accName = "Arlyn";
+    acc_num[8].pin = 74902;
+    acc_num[8].balance = 9000;
 
+    acc_num[9].id = 10;
+    acc_num[9].accName = "Alliyah Jade";
+    acc_num[9].pin = 10479;
+    acc_num[9].balance = 15000;
 
     string name;
     int pin;
@@ -191,7 +186,9 @@ public:
 
         for(int i = 0; i < 10; i++) {
 
-            if(myacc[i].accName == name && myacc[i].pin == pin) {
+            if(acc_num[i].accName == name && acc_num[i].pin == pin) {
+
+
                 cout << "\nInvalid Account Name or PIN!" << endl;
             }
         }
@@ -200,4 +197,6 @@ public:
 
     return 0;
 }
+
+
 
