@@ -73,50 +73,50 @@ public:
         }
     }
 
-    void menu() {
+        void menu() {
 
-        int choice;
+    int choice;
 
-        do {
+    do {
 
-            cout << "\n==== ATM MENU ====" << endl;
-            cout << "1. View Balance" << endl;
-            cout << "2. Deposit Money" << endl;
-            cout << "3. Withdraw Money" << endl;
-            cout << "4. Change PIN" << endl;
-            cout << "5. Logout" << endl;
+        cout << "\n====== ATM MENU ======" << endl;
+        cout << "1. View Balance" << endl;
+        cout << "2. Deposit Money" << endl;
+        cout << "3. Withdraw Money" << endl;
+        cout << "4. Change PIN" << endl;
+        cout << "5. Logout" << endl;
 
-            cout << "\nChoose an option: ";
-            cin >> choice;
+        cout << "\nChoose an option: ";
+        cin >> choice;
 
-            switch(choice) {
+        if(choice == 1) {
 
-                case 1:
-                    checkbal();
-                    break;
+            checkbal();
+        }
+        else if(choice == 2) {
 
-                case 2:
-                    depositMoney();
-                    break;
+            depositMoney();
+        }
+        else if(choice == 3) {
 
-                case 3:
-                    withdraw();
-                    break;
+            withdraw();
+        }
+        else if(choice == 4) {
 
-                case 4:
-                    changePin();
-                    break;
+            changePin();
+        }
+        else if(choice == 5) {
 
-                case 5:
-                    cout << "\nLogged out successfully!" << endl;
-                    break;
+            cout << "\nLogged out successfully!" << endl;
+        }
+        else {
 
-                default:
-                    cout << "\nInvalid option. Please try again." << endl;
-            }
+            cout << "\nInvalid option. Please try again." << endl;
+        }
 
-        } while(choice != 5);
-    }
+    } while(choice != 5);
+}
+
 };
 
 int main() {
